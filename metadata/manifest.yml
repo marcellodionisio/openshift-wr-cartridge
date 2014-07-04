@@ -1,0 +1,87 @@
+---
+Name: webratio
+Cartridge-Short-Name: WEBRATIO
+Cartridge-Vendor: WebRatio
+Cartridge-Version: 0.0.1
+Compatible-Versions:
+Display-Name: WebRatio Cartridge
+Description: JBoss Enterprise Web Server is the enterprise-class Java web container
+  for large-scale lightweight web applications based on Tomcat 7. Build and deploy
+  JSPs and Servlets in the cloud.
+Version: '2.0'
+Versions:
+- '2.0'
+- '1.0'
+License: LGPL
+License-Url: http://www.gnu.org/copyleft/lesser.txt
+Vendor: WebRatio
+Categories:
+- service
+- java
+- jboss
+- tomcat
+- tomcat7
+- web_framework
+Website: http://www.webratio.com
+Help-Topics:
+  Developer Center: https://www.openshift.com/developers
+Provides:
+- jbossews-2.0
+- jbossews
+- jboss-ews-2.0
+- jboss-ews-2.0.0
+Publishes:
+  get-internal-uri:
+    Type: NET_TCP:http
+Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
+  set-jdbc-info:
+    Type: NET_TCP:jdbc
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: HTTP_PORT
+  Private-Port: 8080
+  Public-Port-Name: HTTP_PROXY_PORT
+  Protocols:
+  - http
+  - ws
+  Options:
+    primary: true
+  Mappings:
+  - Frontend: ''
+    Backend: ''
+    Options:
+      websocket: 1
+  - Frontend: "/health"
+    Backend: ''
+    Options:
+      health: true
+- Private-IP-Name: IP
+  Private-Port-Name: JPDA_PORT
+  Private-Port: 8787
+Additional-Control-Actions:
+- threaddump
+Source-Url: 
+ Source-Url: git@github.com/marcellodionisiowr/openshift-wr-cartridge
+Version-Overrides:
+  '1.0':
+    Display-Name: Tomcat 6 (JBoss EWS 1.0)
+    Description: JBoss Enterprise Web Server is the enterprise-class Java web container
+      for large-scale lightweight web applications based on Tomcat 6. Build and deploy
+      JSPs and Servlets in the cloud.
+    Provides:
+    - jbossews-1.0
+    - jbossews
+    - jbossews(version) = 1.0.0
+    - jbossews(version) >= 1.0
+    - jboss-ews-1.0
+    - jboss-ews-1.0.0
+    Categories:
+    - service
+    - java
+    - jboss
+    - tomcat
+    - tomcat6
+    - web_framework

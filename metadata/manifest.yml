@@ -63,6 +63,8 @@ Endpoints:
   Private-Port: 8787
 Additional-Control-Actions:
 - threaddump
+Source-Url: 
+ https://github.com/marcellodionisiowr/openshift-wr-cartridge.git
 Version-Overrides:
   '1.0':
     Display-Name: Tomcat 6 (JBoss EWS 1.0)

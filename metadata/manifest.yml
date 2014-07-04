@@ -64,7 +64,7 @@ Endpoints:
 Additional-Control-Actions:
 - threaddump
 Source-Url: 
- https://github.com/marcellodionisiowr/openshift-wr-cartridge.git
+ Source-Url: git@github.com/marcellodionisiowr/openshift-wr-cartridge
 Version-Overrides:
   '1.0':
     Display-Name: Tomcat 6 (JBoss EWS 1.0)

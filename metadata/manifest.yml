@@ -1,10 +1,12 @@
 ---
-Name: webratio
-Cartridge-Short-Name: WEBRATIO
-Cartridge-Vendor: Genoveffo
-Cartridge-Version: 0.0.1
+Name: jbossews
+Cartridge-Short-Name: JBOSSEWS
+Cartridge-Vendor: webratio
+Cartridge-Version: 0.0.19
 Compatible-Versions:
-Display-Name: WebRatio Cartridge
+- 0.0.17
+- 0.0.18
+Display-Name: WebRatio
 Description: JBoss Enterprise Web Server is the enterprise-class Java web container
   for large-scale lightweight web applications based on Tomcat 7. Build and deploy
   JSPs and Servlets in the cloud.
@@ -14,7 +16,7 @@ Versions:
 - '1.0'
 License: LGPL
 License-Url: http://www.gnu.org/copyleft/lesser.txt
-Vendor: WebRatio
+Vendor: jboss.com
 Categories:
 - service
 - java
@@ -63,8 +65,6 @@ Endpoints:
   Private-Port: 8787
 Additional-Control-Actions:
 - threaddump
-Source-Url: 
- Source-Url: git@github.com/marcellodionisiowr/openshift-wr-cartridge
 Version-Overrides:
   '1.0':
     Display-Name: Tomcat 6 (JBoss EWS 1.0)
